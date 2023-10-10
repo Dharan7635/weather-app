@@ -24,7 +24,7 @@ body {
 
 .wrapper header {
     color: #43AFFC;
-    font-size: 21px;
+    font-size: 1.4em;
     font-weight: 500;
     padding: 16px 15px;
     border-bottom: 1px solid #bfbfbf;
@@ -37,6 +37,11 @@ header i {
     font-size: 0px;
     margin-right: 8px;
 }
+
+.wrapper.active header i{
+    margin-left: 5px;
+    font-size: 30px;
+  }
 
 .wrapper.active header {
     font-size: 30px;
