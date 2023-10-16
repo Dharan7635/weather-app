@@ -1,3 +1,6 @@
+import { WEATHER_API_KEY } from "./apikey.js";
+console.log(WEATHER_API_KEY);
+
 const wrapper = document.querySelector(".wrapper"),
     inputPart = wrapper.querySelector(".input-part"),
     infoTxt = inputPart.querySelector(".info-text"),
@@ -5,9 +8,9 @@ const wrapper = document.querySelector(".wrapper"),
     locationBtn = inputPart.querySelector("button"),
     wIcon = wrapper.querySelector(".weather-part img"),
     back = wrapper.querySelector("header i");
-console.log(back);
+    console.log(back);
 
-const apiKey = "51bbf56af29d4a526fde863ebefe832d";
+// const WEATHER_API_KEY = "51bbf56af29d4a526fde863ebefe832d";
 let api;
 
 inputField.addEventListener("keyup", e => {
@@ -26,7 +29,7 @@ locationBtn.addEventListener("click", () => {
 
 function onSuccess(position) {
     const { latitude, longitude } = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${WEATHER_API_KEY}`;
     fetchData();
 }
 
@@ -36,7 +39,7 @@ function onError(error) {
 }
 
 function requestApi(city) {
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${WEATHER_API_KEY}`;
     fetchData();
 }
 
