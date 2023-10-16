@@ -9,8 +9,7 @@ const wrapper = document.querySelector(".wrapper"),
     wIcon = wrapper.querySelector(".weather-part img"),
     back = wrapper.querySelector("header i");
     console.log(back);
-
-// const WEATHER_API_KEY = "51bbf56af29d4a526fde863ebefe832d";
+    
 let api;
 
 inputField.addEventListener("keyup", e => {
